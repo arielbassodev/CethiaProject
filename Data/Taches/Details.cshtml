@@ -1,0 +1,37 @@
+﻿@page
+@model ProjetD.Pages.Taches.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Tache</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Tache.Intitulé)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Tache.Intitulé)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Tache.Autheur)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Tache.Autheur)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Tache.Date)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Tache.Date)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Tache?.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

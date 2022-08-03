@@ -1,0 +1,49 @@
+﻿@page
+@model ProjetD.Pages.Personnelles.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Personnel</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Personnel.Nom)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Personnel.Nom)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Personnel.Prenom)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Personnel.Prenom)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Personnel.TypeD)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Personnel.TypeD)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Personnel.DateArrivé)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Personnel.DateArrivé)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Personnel.Genre)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Personnel.Genre)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Personnel?.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

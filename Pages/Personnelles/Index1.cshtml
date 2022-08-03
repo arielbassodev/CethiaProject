@@ -1,0 +1,28 @@
+﻿@page
+@model ProjetD.Pages.Personnelles.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1> Membre ajouté avec Succèes</h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        Vous pouvez si vous voulez Créer un autre  pour le faire cliquez à nouveau sur Ajouter un personnel
+
+        <br/>
+       Vous pouvez si vous voulez Le modifier pour le faire cliquez sur Modifier 
+       <br/>
+       Vous pouvez si vous voulez Le supprimer Cliquez sur Supprimer
+
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

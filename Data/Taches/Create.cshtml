@@ -1,0 +1,44 @@
+﻿@page
+@model ProjetD.Pages.Taches.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Tache</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Tache.Intitulé" class="control-label"></label>
+                <input asp-for="Tache.Intitulé" class="form-control" />
+                <span asp-validation-for="Tache.Intitulé" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tache.Autheur" class="control-label"></label>
+                <input asp-for="Tache.Autheur" class="form-control" />
+                <span asp-validation-for="Tache.Autheur" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tache.Date" class="control-label"></label>
+                <input asp-for="Tache.Date" class="form-control" />
+                <span asp-validation-for="Tache.Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
